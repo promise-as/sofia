@@ -68,7 +68,7 @@ a {
     }
 }
 
-input[type="input"],
+input[type="text"],
 input[type='radio'],
 select {
     appearance: none;
@@ -289,10 +289,107 @@ input[type="submit"] {
         font-weight: normal;
     }
 }
+.btn-module{
+    width: 440px;
+    height: 40px;
+    border: solid 1px #af1b40;
+    border-radius: 20px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    img{
+        float: left;
+        margin-top: 10px;
+    }
+    .tel{
+        float: left;
+        line-height: 40px;
+        margin-left: 2px;
+        color: $bg-color;
+        font-size: 20px;
+    }
+    a{
+        float: right;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 30px;
+        box-sizing: border-box;
+        background-color: $bg-color;
+        border-radius: 20px;
+        color: #ffffff;
+        margin-right: -1px;
+        font-size: 18px;
+    }
+}
 
 /* 新政策 */
-.policy{
+.policy {
     padding-bottom: 62px;
+    .sign-in{
+        width: 898px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 56px;
+        text-align: center;
+        font-size: 18px;
+        .work-years, .degree{
+            display: none;
+        }
+        .work-years-replace, .degree-replace{
+            overflow: visible;
+            position: relative;
+            width: 260px;
+            height: 40px;
+            line-height: 40px;
+            margin-right: 50px;
+            @extend %in-b;
+            .current-years, .current-degree{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                box-sizing: border-box;
+                color: $txt-color;
+                outline: none;
+                margin-bottom: 0;
+                cursor: pointer;
+                border: solid 1px #a0a0a0;
+                background: url("../images/icon_10.png") no-repeat 96% center; // position: 左右 上下
+            }
+            .years-options, .degree-options{
+                display: none;
+                position: absolute;
+                z-index: 10;
+                cursor: pointer;
+                li{
+                    width: 260px;
+                    padding-left: 1em;
+                    box-sizing: border-box;
+                    border-left: 1px solid #a0a0a0;
+                    border-right: 1px solid #a0a0a0;
+                    border-bottom: 1px solid #a0a0a0;
+                    text-align: left;
+                    background-color: #ffffff;
+                    &:hover{
+                        background-color: $bg-color;
+                        border-left: 1px solid $bg-color;
+                        border-right: 1px solid $bg-color;
+                        border-bottom: 1px solid $bg-color;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        .phone-num{
+            width: 260px;
+            height: 40px;
+            line-height: 40px;
+            border: solid 1px #a0a0a0;
+            box-sizing: border-box;
+            color: $txt-color;
+        }
+    }
 }
 
 /* 合适人选 */
@@ -300,11 +397,42 @@ input[type="submit"] {
     background: url("../images/bg_1.png") no-repeat;
     padding-top: 70px;
     padding-bottom: 86px;
+    .suitable-cont{
+        width: 1042px;
+        margin-left: auto;
+        margin-right: auto;
+        @extend %clearfix;
+        margin-top: 57px;
+        .cont-detail{
+            width: 288px;
+            float: left;
+            .detail-item{
+                line-height: 28px;
+                margin-bottom: 30px;
+                .item-title{
+                    font-size: 19px;
+                    font-weight: bold;
+                    strong{
+                        color: $bg-color;
+                        font-weight: bold;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        img{
+            float: left;
+            margin-right: 10px;
+        }
+    }
 }
 
 /* VS */
 .vs{
     padding-top: 80px;
+    margin-bottom: 89px;
     .vs-cont{
         width: 1060px;
         height: 345px;
@@ -391,6 +519,226 @@ input[type="submit"] {
                 .col-detail{
                     text-align: left;
                 }
+            }
+        }
+    }
+}
+
+/* USA */
+.USA{
+    background: url("../images/bg_3.png") no-repeat;
+    padding-top: 90px;
+    padding-bottom: 180px;
+    font-size: 30px;
+    .data{
+        width: 1002px;
+        height: 217px;
+        background: url("../images/bg_4.png") no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 23px;
+        box-sizing: border-box;
+        img{
+            float: left;
+        }
+        .data-detail{
+            width: 730px;
+            float: left;
+            margin-left: 30px;
+            font-weight: bold;
+            padding-top: 20px;
+            strong{
+                color: $bg-color;
+                font-weight: bold;
+                font-size: 35px;
+            }
+        }
+    }
+    p{
+        color: #ffffff;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+/* WASC */
+.WASC{
+    padding-top: 80px;
+    width: 1002px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    .WASC-item{
+        @extend %clearfix;
+        margin-top: 48px;
+        text-align: center;
+        .sofia-school-bg{
+            float: left;
+        }
+        .item-detail{
+            width: 543px;
+            float: right;
+            font-size: 16px;
+            line-height: 24px;
+            color: #545454;
+            text-align: justify;
+            .sofia-university{
+                text-indent: 2em;
+                margin-bottom: 20px;
+            }
+            .authentication{
+                @extend %clearfix;
+                .left{
+                    float: left;
+                    strong{
+                        color: $bg-color;
+                        font-weight: bold;
+                    }
+                }
+                .right{
+                    float: left;
+                }
+            }
+        }
+        .item-schools{
+            width: 420px;
+            float: left;
+            .schools-title{
+                font-size: 24px;
+                strong{
+                    color: $bg-color;
+                }
+            }
+            .schools-all{
+                margin-top: 10px;
+                border-left: 1px solid #a0a0a0;
+                border-top: 1px solid #a0a0a0;
+                @extend %clearfix;
+                .school{
+                    min-width: 102px;
+                    min-height: 107px;
+                    font-size: 11px;
+                    padding-top: 8px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    border-right: 1px solid #a0a0a0;
+                    border-bottom: 1px solid #a0a0a0;
+                    box-sizing: border-box;
+                    float: left;
+                    p{
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                    }
+                    .more{
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+        .item-eud-ace{
+            width: 543px;
+            float: right;
+            font-size: 24px;
+            .ace-title{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* 申请条件 */
+.apply-condition{
+    width: 1002px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    @extend %clearfix;
+    .apply-item{
+        width: 25%;
+        text-align: center;
+        float: left;
+        font-size: 18px;
+        margin-top: 40px;
+        img{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/* 收获 */
+.harvest{
+    height: 900px;
+    background: url("../images/bg_6.png") no-repeat;
+    padding-top: 105px;
+    .harvest-cont{
+        width: 1002px;
+        margin-left: auto;
+        margin-right: auto;
+        .cont-detail{
+            @extend %clearfix;
+            margin-top: 20px;
+            margin-right: -24px;
+            .detail-item{
+                width: 318px;
+                height: 184px;
+                padding: 34px 20px 20px;
+                box-sizing: border-box;
+                text-align: center;
+                float: left;
+                margin-top: 24px;
+                margin-right: 24px;
+                background-color: #ffffff;
+                box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+                border-radius: 12px;
+                .item-title{
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 44px;
+                }
+                p{
+                    font-size: 13px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+/* 名师 + 教授 */
+.teachers{
+    text-align: center;
+    .teachers-detail{
+        @extend %in-b;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+/* 课程 */
+.courses{
+    height: 940px;
+    background: url("../images/bg_8.png") no-repeat;
+    padding-top: 98px;
+    .courses-cont{
+        width: 1002px;
+        margin-left: auto;
+        margin-right: auto;
+        .cont-item{
+            width: 484px;
+            height: 100px;
+            background-color: #ffffff;
+            box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            text-align: center;
+
+            .left{
+                width: 100px;
+                height: 100%;
+                border-right: 1px solid $bg-color;
+                padding-top: 25px;
+                box-sizing: border-box;
+                font-size: 23px;
+                line-height: 24px;
             }
         }
     }

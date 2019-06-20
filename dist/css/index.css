@@ -49,26 +49,26 @@ a {
   overflow: hidden;
 }
 
-.header .header-right .tel span, .enroll .enroll-item img, .enroll .enroll-item .item-title, .enroll .enroll-item .item-btn, .enroll .enroll-item .enroll-cont .cont-item, .title-module img, .vs .vs-cont .cont-col .col-detail span, .vs .vs-cont .cont-col .col-items span {
+.header .header-right .tel span, .enroll .enroll-item img, .enroll .enroll-item .item-title, .enroll .enroll-item .item-btn, .enroll .enroll-item .enroll-cont .cont-item, .title-module img, .policy .sign-in .work-years-replace, .policy .sign-in .degree-replace, .vs .vs-cont .cont-col .col-detail span, .vs .vs-cont .cont-col .col-items span, .teachers .teachers-detail {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
 
-.header, .enroll {
+.header, .enroll, .suitable .suitable-cont, .WASC .WASC-item, .WASC .WASC-item .item-detail .authentication, .WASC .WASC-item .item-schools .schools-all, .apply-condition, .harvest .harvest-cont .cont-detail {
   zoom: 1;
 }
 
-.header:after, .enroll:after {
+.header:after, .enroll:after, .suitable .suitable-cont:after, .WASC .WASC-item:after, .WASC .WASC-item .item-detail .authentication:after, .WASC .WASC-item .item-schools .schools-all:after, .apply-condition:after, .harvest .harvest-cont .cont-detail:after {
   clear: both;
 }
 
-.header:before, .enroll:before, .header:after, .enroll:after {
+.header:before, .enroll:before, .suitable .suitable-cont:before, .WASC .WASC-item:before, .WASC .WASC-item .item-detail .authentication:before, .WASC .WASC-item .item-schools .schools-all:before, .apply-condition:before, .harvest .harvest-cont .cont-detail:before, .header:after, .enroll:after, .suitable .suitable-cont:after, .WASC .WASC-item:after, .WASC .WASC-item .item-detail .authentication:after, .WASC .WASC-item .item-schools .schools-all:after, .apply-condition:after, .harvest .harvest-cont .cont-detail:after {
   content: "";
   display: table;
 }
 
-input[type="input"],
+input[type="text"],
 input[type='radio'],
 select {
   appearance: none;
@@ -76,28 +76,28 @@ select {
   -webkit-appearance: none;
 }
 
-input[type="input"]::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
 input[type='radio']::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #999;
   font-size: inherit;
 }
 
-input[type="input"]:-moz-placeholder,
+input[type="text"]:-moz-placeholder,
 input[type='radio']:-moz-placeholder,
 select:-moz-placeholder {
   color: #999;
   font-size: inherit;
 }
 
-input[type="input"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
 input[type='radio']::-moz-placeholder,
 select::-moz-placeholder {
   color: #999;
   font-size: inherit;
 }
 
-input[type="input"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
 input[type='radio']:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #999;
@@ -308,9 +308,122 @@ input[type="submit"] {
   font-weight: normal;
 }
 
+.btn-module {
+  width: 440px;
+  height: 40px;
+  border: solid 1px #af1b40;
+  border-radius: 20px;
+  padding-left: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.btn-module img {
+  float: left;
+  margin-top: 10px;
+}
+
+.btn-module .tel {
+  float: left;
+  line-height: 40px;
+  margin-left: 2px;
+  color: #af1b40;
+  font-size: 20px;
+}
+
+.btn-module a {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #af1b40;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-right: -1px;
+  font-size: 18px;
+}
+
 /* 新政策 */
 .policy {
   padding-bottom: 62px;
+}
+
+.policy .sign-in {
+  width: 898px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 56px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.policy .sign-in .work-years, .policy .sign-in .degree {
+  display: none;
+}
+
+.policy .sign-in .work-years-replace, .policy .sign-in .degree-replace {
+  overflow: visible;
+  position: relative;
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 50px;
+}
+
+.policy .sign-in .work-years-replace .current-years, .policy .sign-in .work-years-replace .current-degree, .policy .sign-in .degree-replace .current-years, .policy .sign-in .degree-replace .current-degree {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #313131;
+  outline: none;
+  margin-bottom: 0;
+  cursor: pointer;
+  border: solid 1px #a0a0a0;
+  background: url("../images/icon_10.png") no-repeat 96% center;
+}
+
+.policy .sign-in .work-years-replace .years-options, .policy .sign-in .work-years-replace .degree-options, .policy .sign-in .degree-replace .years-options, .policy .sign-in .degree-replace .degree-options {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.policy .sign-in .work-years-replace .years-options li, .policy .sign-in .work-years-replace .degree-options li, .policy .sign-in .degree-replace .years-options li, .policy .sign-in .degree-replace .degree-options li {
+  width: 260px;
+  padding-left: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-left: 1px solid #a0a0a0;
+  border-right: 1px solid #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.policy .sign-in .work-years-replace .years-options li:hover, .policy .sign-in .work-years-replace .degree-options li:hover, .policy .sign-in .degree-replace .years-options li:hover, .policy .sign-in .degree-replace .degree-options li:hover {
+  background-color: #af1b40;
+  border-left: 1px solid #af1b40;
+  border-right: 1px solid #af1b40;
+  border-bottom: 1px solid #af1b40;
+  color: #ffffff;
+}
+
+.policy .sign-in .phone-num {
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  border: solid 1px #a0a0a0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #313131;
 }
 
 /* 合适人选 */
@@ -320,9 +433,46 @@ input[type="submit"] {
   padding-bottom: 86px;
 }
 
+.suitable .suitable-cont {
+  width: 1042px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 57px;
+}
+
+.suitable .suitable-cont .cont-detail {
+  width: 288px;
+  float: left;
+}
+
+.suitable .suitable-cont .cont-detail .detail-item {
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.suitable .suitable-cont .cont-detail .detail-item .item-title {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.suitable .suitable-cont .cont-detail .detail-item .item-title strong {
+  color: #af1b40;
+  font-weight: bold;
+}
+
+.suitable .suitable-cont .cont-detail .detail-item p {
+  font-size: 16px;
+}
+
+.suitable .suitable-cont img {
+  float: left;
+  margin-right: 10px;
+}
+
 /* VS */
 .vs {
   padding-top: 80px;
+  margin-bottom: 89px;
 }
 
 .vs .vs-cont {
@@ -422,4 +572,253 @@ input[type="submit"] {
 
 .vs .vs-cont .cont-col:nth-of-type(3) .col-detail {
   text-align: left;
+}
+
+/* USA */
+.USA {
+  background: url("../images/bg_3.png") no-repeat;
+  padding-top: 90px;
+  padding-bottom: 180px;
+  font-size: 30px;
+}
+
+.USA .data {
+  width: 1002px;
+  height: 217px;
+  background: url("../images/bg_4.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 23px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.USA .data img {
+  float: left;
+}
+
+.USA .data .data-detail {
+  width: 730px;
+  float: left;
+  margin-left: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.USA .data .data-detail strong {
+  color: #af1b40;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.USA p {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* WASC */
+.WASC {
+  padding-top: 80px;
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+.WASC .WASC-item {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.WASC .WASC-item .sofia-school-bg {
+  float: left;
+}
+
+.WASC .WASC-item .item-detail {
+  width: 543px;
+  float: right;
+  font-size: 16px;
+  line-height: 24px;
+  color: #545454;
+  text-align: justify;
+}
+
+.WASC .WASC-item .item-detail .sofia-university {
+  text-indent: 2em;
+  margin-bottom: 20px;
+}
+
+.WASC .WASC-item .item-detail .authentication .left {
+  float: left;
+}
+
+.WASC .WASC-item .item-detail .authentication .left strong {
+  color: #af1b40;
+  font-weight: bold;
+}
+
+.WASC .WASC-item .item-detail .authentication .right {
+  float: left;
+}
+
+.WASC .WASC-item .item-schools {
+  width: 420px;
+  float: left;
+}
+
+.WASC .WASC-item .item-schools .schools-title {
+  font-size: 24px;
+}
+
+.WASC .WASC-item .item-schools .schools-title strong {
+  color: #af1b40;
+}
+
+.WASC .WASC-item .item-schools .schools-all {
+  margin-top: 10px;
+  border-left: 1px solid #a0a0a0;
+  border-top: 1px solid #a0a0a0;
+}
+
+.WASC .WASC-item .item-schools .schools-all .school {
+  min-width: 102px;
+  min-height: 107px;
+  font-size: 11px;
+  padding-top: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-right: 1px solid #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
+
+.WASC .WASC-item .item-schools .schools-all .school p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.WASC .WASC-item .item-schools .schools-all .school .more {
+  margin-top: 50px;
+}
+
+.WASC .WASC-item .item-eud-ace {
+  width: 543px;
+  float: right;
+  font-size: 24px;
+}
+
+.WASC .WASC-item .item-eud-ace .ace-title {
+  margin-bottom: 10px;
+}
+
+/* 申请条件 */
+.apply-condition {
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+.apply-condition .apply-item {
+  width: 25%;
+  text-align: center;
+  float: left;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.apply-condition .apply-item img {
+  margin-bottom: 16px;
+}
+
+/* 收获 */
+.harvest {
+  height: 900px;
+  background: url("../images/bg_6.png") no-repeat;
+  padding-top: 105px;
+}
+
+.harvest .harvest-cont {
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.harvest .harvest-cont .cont-detail {
+  margin-top: 20px;
+  margin-right: -24px;
+}
+
+.harvest .harvest-cont .cont-detail .detail-item {
+  width: 318px;
+  height: 184px;
+  padding: 34px 20px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  float: left;
+  margin-top: 24px;
+  margin-right: 24px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+.harvest .harvest-cont .cont-detail .detail-item .item-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 44px;
+}
+
+.harvest .harvest-cont .cont-detail .detail-item p {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+/* 名师 + 教授 */
+.teachers {
+  text-align: center;
+}
+
+.teachers .teachers-detail {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/* 课程 */
+.courses {
+  height: 940px;
+  background: url("../images/bg_8.png") no-repeat;
+  padding-top: 98px;
+}
+
+.courses .courses-cont {
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.courses .courses-cont .cont-item {
+  width: 484px;
+  height: 100px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.courses .courses-cont .cont-item .left {
+  width: 100px;
+  height: 100%;
+  border-right: 1px solid #af1b40;
+  padding-top: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 23px;
+  line-height: 24px;
 }
