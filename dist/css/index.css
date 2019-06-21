@@ -43,27 +43,27 @@ a {
   color: inherit;
 }
 
-.enroll .enroll-item .enroll-cont .cont-item {
+.enroll .enroll-item .enroll-cont .cont-detail .text {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.header .header-right .tel span, .enroll .enroll-item img, .enroll .enroll-item .item-title, .enroll .enroll-item .item-btn, .enroll .enroll-item .enroll-cont .cont-item, .title-module img, .policy .sign-in .work-years-replace, .policy .sign-in .degree-replace, .vs .vs-cont .cont-col .col-detail span, .vs .vs-cont .cont-col .col-items span, .teachers .teachers-detail {
+.header .header-right .tel span, .enroll .enroll-item img, .enroll .enroll-item .item-title, .enroll .enroll-item .item-btn, .title-module img, .policy .sign-in .work-years-replace, .policy .sign-in .degree-replace, .vs .vs-cont .cont-col .col-detail span, .vs .vs-cont .cont-col .col-items span, .harvest .harvest-cont .cont-detail .detail-item.active img.sel, .teachers .teachers-detail {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
 
-.header, .enroll, .suitable .suitable-cont, .WASC .WASC-item, .WASC .WASC-item .item-detail .authentication, .WASC .WASC-item .item-schools .schools-all, .apply-condition, .harvest .harvest-cont .cont-detail {
+.header, .enroll, .suitable .suitable-cont, .WASC .WASC-item, .WASC .WASC-item .item-detail .authentication, .WASC .WASC-item .item-schools .schools-all, .apply-condition, .harvest .harvest-cont .cont-detail, .courses .courses-cont, .outdoors .outdoors-cont .cont-detail {
   zoom: 1;
 }
 
-.header:after, .enroll:after, .suitable .suitable-cont:after, .WASC .WASC-item:after, .WASC .WASC-item .item-detail .authentication:after, .WASC .WASC-item .item-schools .schools-all:after, .apply-condition:after, .harvest .harvest-cont .cont-detail:after {
+.header:after, .enroll:after, .suitable .suitable-cont:after, .WASC .WASC-item:after, .WASC .WASC-item .item-detail .authentication:after, .WASC .WASC-item .item-schools .schools-all:after, .apply-condition:after, .harvest .harvest-cont .cont-detail:after, .courses .courses-cont:after, .outdoors .outdoors-cont .cont-detail:after {
   clear: both;
 }
 
-.header:before, .enroll:before, .suitable .suitable-cont:before, .WASC .WASC-item:before, .WASC .WASC-item .item-detail .authentication:before, .WASC .WASC-item .item-schools .schools-all:before, .apply-condition:before, .harvest .harvest-cont .cont-detail:before, .header:after, .enroll:after, .suitable .suitable-cont:after, .WASC .WASC-item:after, .WASC .WASC-item .item-detail .authentication:after, .WASC .WASC-item .item-schools .schools-all:after, .apply-condition:after, .harvest .harvest-cont .cont-detail:after {
+.header:before, .enroll:before, .suitable .suitable-cont:before, .WASC .WASC-item:before, .WASC .WASC-item .item-detail .authentication:before, .WASC .WASC-item .item-schools .schools-all:before, .apply-condition:before, .harvest .harvest-cont .cont-detail:before, .courses .courses-cont:before, .outdoors .outdoors-cont .cont-detail:before, .header:after, .enroll:after, .suitable .suitable-cont:after, .WASC .WASC-item:after, .WASC .WASC-item .item-detail .authentication:after, .WASC .WASC-item .item-schools .schools-all:after, .apply-condition:after, .harvest .harvest-cont .cont-detail:after, .courses .courses-cont:after, .outdoors .outdoors-cont .cont-detail:after {
   content: "";
   display: table;
 }
@@ -194,7 +194,7 @@ input[type="submit"] {
 }
 
 .header .header-right .tel img {
-  vertical-align: baseline;
+  margin-top: 4px;
 }
 
 .header .header-right .tel span {
@@ -215,7 +215,7 @@ input[type="submit"] {
 
 /* 招生 */
 .enroll {
-  width: 1002px;
+  width: 1000px;
   margin-top: -80px;
   margin-left: auto;
   margin-right: auto;
@@ -262,15 +262,20 @@ input[type="submit"] {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, #7f859e 50%, #ca9ca8 100%);
-  padding: 14px 0 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
+  background: url("../images/bg_12.png") no-repeat;
 }
 
-.enroll .enroll-item .enroll-cont .cont-item {
+.enroll .enroll-item .enroll-cont .cont-detail {
   width: 168px;
+  margin-top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enroll .enroll-item .enroll-cont .cont-detail .text {
+  display: block;
   height: 34px;
   line-height: 34px;
   font-size: 15px;
@@ -278,10 +283,10 @@ input[type="submit"] {
   border: 1px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
-.enroll .enroll-item .enroll-cont .cont-item:hover {
+.enroll .enroll-item .enroll-cont .cont-detail .text:hover {
   border: 1px solid #af1b40;
   background-color: #af1b40;
 }
@@ -779,6 +784,16 @@ input[type="submit"] {
   line-height: 24px;
 }
 
+.harvest .harvest-cont .cont-detail .detail-item.active {
+  background-color: #af1b40;
+  color: #ffffff;
+  text-align: center;
+}
+
+.harvest .harvest-cont .cont-detail .detail-item.active img {
+  display: none;
+}
+
 /* 名师 + 教授 */
 .teachers {
   text-align: center;
@@ -791,15 +806,16 @@ input[type="submit"] {
 
 /* 课程 */
 .courses {
-  height: 940px;
   background: url("../images/bg_8.png") no-repeat;
   padding-top: 98px;
+  padding-bottom: 86px;
 }
 
 .courses .courses-cont {
-  width: 1002px;
+  width: 1034px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 60px;
 }
 
 .courses .courses-cont .cont-item {
@@ -810,9 +826,12 @@ input[type="submit"] {
           box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   text-align: center;
+  float: left;
+  margin: 0 16px 16px;
 }
 
 .courses .courses-cont .cont-item .left {
+  float: left;
   width: 100px;
   height: 100%;
   border-right: 1px solid #af1b40;
@@ -821,4 +840,214 @@ input[type="submit"] {
           box-sizing: border-box;
   font-size: 23px;
   line-height: 24px;
+}
+
+.courses .courses-cont .cont-item .right {
+  float: left;
+  padding: 24px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+/* 户外 */
+.outdoors {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+.outdoors .outdoors-cont {
+  width: 1004px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.outdoors .outdoors-cont .cont-detail {
+  margin-right: -15px;
+}
+
+.outdoors .outdoors-cont .cont-detail .detail-item {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 16px;
+  position: relative;
+  width: 494px;
+  height: 257px;
+}
+
+.outdoors .outdoors-cont .cont-detail .detail-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.outdoors .outdoors-cont .cont-detail .detail-item .item-text {
+  width: 100%;
+  height: 51px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 17px;
+  line-height: 44px;
+  color: #ffffff;
+  text-align: center;
+  background: url("../images/bg_9.png");
+  font-weight: bold;
+}
+
+.outdoors .outdoors-cont .cont-detail .detail-item.big {
+  width: 1004px;
+  height: 316px;
+}
+
+/* 精英 */
+.elites {
+  padding-bottom: 68px;
+}
+
+.elites .schoolmate {
+  width: 1005px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.elites .lce {
+  width: 1017px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+
+/* 报考流程 */
+.enter-process {
+  background: url("../images/bg_10.png") no-repeat;
+  padding-top: 94px;
+  padding-bottom: 70px;
+}
+
+.enter-process .enter-process-cont {
+  width: 998px;
+  height: 156px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 68px;
+}
+
+.footer {
+  background-color: #333333;
+  padding-top: 28px;
+  padding-bottom: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 180px;
+}
+
+.footer .footer-nav {
+  color: #5a5a5a;
+}
+
+.footer .footer-nav a {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.footer .footer-nav a:hover {
+  color: #af1b40;
+}
+
+.footer .copyright {
+  color: #fafafa;
+  opacity: 0.4;
+}
+
+/* 底部悬浮 */
+.footer-suspend {
+  width: 100%;
+  height: 100px;
+  background: url("../images/bg_11.png");
+  position: fixed;
+  bottom: 0;
+  z-index: 300;
+}
+
+.footer-suspend .suspend-cont {
+  width: 1200px;
+  height: 176px;
+  background: url("../images/footer_suspend.png") no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.footer-suspend .suspend-cont .sign-in {
+  width: 695px;
+  height: 27px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+
+.footer-suspend .suspend-cont .sign-in input {
+  height: 27px;
+  line-height: 27px;
+  background-color: #ffffff;
+  border: solid 1px #a0a0a0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
+
+.footer-suspend .suspend-cont .sign-in .user-name {
+  width: 107px;
+  margin-right: 24px;
+}
+
+.footer-suspend .suspend-cont .sign-in .user-tel {
+  width: 178px;
+}
+
+.footer-suspend .suspend-cont .sign-in .btn {
+  width: 345px;
+  height: 27px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 13px;
+  float: right;
+}
+
+.footer-suspend .suspend-cont .sign-in .btn .submit {
+  width: 134px;
+  height: 27px;
+  line-height: 26px;
+  background-color: #af1b40;
+  border: solid 1px #af1b40;
+  border-radius: 13px;
+  font-size: 14px;
+  margin-left: -1px;
+}
+
+.footer-suspend .suspend-cont .sign-in .btn .tel {
+  float: right;
+}
+
+.footer-suspend .suspend-cont .sign-in .btn .tel img {
+  margin-top: 5px;
+}
+
+.footer-suspend .suspend-cont .sign-in .btn .tel span {
+  font-size: 18px;
+  line-height: 27px;
+  color: #af1b40;
 }
