@@ -26,4 +26,6 @@ $(function () {
   optimizeSelect($(".current-years"), $(".years-options"), $(".work-years"));
   // 学历/学位
   optimizeSelect($(".current-degree"), $(".degree-options"), $(".degree"));
+
+  theaMsForm($('.sign-in'));
 });
